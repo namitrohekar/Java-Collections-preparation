@@ -1,0 +1,16 @@
+# ===== Eclipse =====
+.metadata/
+.settings/
+.project
+.classpath
+
+# ===== Java build =====
+bin/
+target/
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
