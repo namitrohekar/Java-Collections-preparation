@@ -1,31 +1,45 @@
 # Java Collections Practice
 
 Hands-on practice of the **Java Collections Framework** with a focus on
-**problem solving and interview readiness**.
+**core fundamentals, data-structure intuition, and interview readiness**.
 
 This repository contains small, self-contained Java programs.
-Each class solves **one specific problem** using a collection.
+Each class demonstrates **how and when a specific collection is used**.
 
 ---
 
 ## What’s covered so far
 
-### ArrayList
-- Basic CRUD operations
+### List
+
+#### ArrayList
+- Creation and initialization
+- CRUD operations
 - Different iteration techniques
-- Removing duplicates without using extra collections
+- Removing duplicates without extra collections
 - Understanding index vs value-based operations
+
+#### LinkedList
+- Node-based structure (conceptual understanding)
+- Insertion and removal at ends
+- Traversal behavior
+- Comparison with ArrayList (use-case driven)
+
+#### Vector (awareness)
+- Legacy synchronized list
+- Why it exists and why it’s avoided today
 
 ---
 
 ## Structure
-- One problem per class
+- One concept or problem per class
 - Each class has its own `main` method
-- No unnecessary abstractions
-- Focus on clarity and correctness
+- Minimal abstractions
+- Code-first learning approach
 
 ---
 
 ## Goal
-To build strong fundamentals in Java Collections
-and be able to confidently explain **when and why** a collection is used.
+To build **strong collection fundamentals** that translate directly into
+better **DSA problem solving and interview explanations**, with a clear
+understanding of **when and why** a collection should be used.
