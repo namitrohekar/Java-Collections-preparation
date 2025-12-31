@@ -39,7 +39,4 @@ Each class demonstrates **how and when a specific collection is used**.
 
 ---
 
-## Goal
-To build **strong collection fundamentals** that translate directly into
-better **DSA problem solving and interview explanations**, with a clear
-understanding of **when and why** a collection should be used.
+
