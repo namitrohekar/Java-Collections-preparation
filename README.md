@@ -36,7 +36,5 @@ Each class demonstrates **how and when a specific collection is used**.
 - Each class has its own `main` method
 - Minimal abstractions
 - Code-first learning approach
-
----
-
+- Internal workings of Collections 
 
