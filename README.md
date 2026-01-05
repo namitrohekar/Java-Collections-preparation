@@ -31,6 +31,24 @@ Each class demonstrates **how and when a specific collection is used**.
 
 ---
 
+
+
+### Map Interface
+
+#### HashMap
+- Key-value based data structure
+- Uses hashing to store and retrieve entries
+- Allows **one null key** and **multiple null values**
+- No guarantee of insertion order
+- `put()` inserts or updates entries
+- `putIfAbsent()` inserts only if the key is absent
+- Average time complexity for `put` / `get` / `remove`: **O(1)**
+- Iteration using:
+  - `keySet()` (keys only)
+  - `entrySet()` (preferred for key-value access)
+
+
+
 ## Structure
 - One concept or problem per class
 - Each class has its own `main` method
