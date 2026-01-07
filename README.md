@@ -47,6 +47,31 @@ Each class demonstrates **how and when a specific collection is used**.
   - `keySet()` (keys only)
   - `entrySet()` (preferred for key-value access)
 
+#### LinkedHashMap
+- Maintains **insertion order** by default
+- Can maintain **access order** when `accessOrder = true`
+- Internally uses **HashMap + doubly linked list**
+- Recently accessed entries move to the end
+- Slightly slower than HashMap due to ordering overhead
+- Commonly used when predictable iteration order is required
+
+#### LRU Cache (using LinkedHashMap)
+- LRU = Least Recently Used cache eviction strategy
+- Removes the **least recently accessed entry** when capacity is exceeded
+- Implemented by:
+  - Using `LinkedHashMap` with `accessOrder = true`
+  - Overriding `removeEldestEntry()`
+- Frequently used in caching scenarios
+- Demonstrates real-world usage of LinkedHashMap
+
+#### Garbage Collection & Weak References (awareness)
+- Strong references prevent garbage collection
+- Weak references do **not** prevent garbage collection
+- Objects referenced only by `WeakReference` are eligible for GC
+- `WeakHashMap` uses weak references for keys
+- Entries are automatically removed when keys are no longer strongly referenced
+- Useful for memory-sensitive applications and cache-like structures
+
 
 
 ## Structure
