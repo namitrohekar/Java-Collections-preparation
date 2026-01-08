@@ -72,6 +72,37 @@ Each class demonstrates **how and when a specific collection is used**.
 - Entries are automatically removed when keys are no longer strongly referenced
 - Useful for memory-sensitive applications and cache-like structures
 
+#### Comparable
+- Used to define the **natural ordering** of objects
+- Implemented by a class
+- Defines ordering using the `compareTo()` method
+- A class can have **only one natural ordering**
+- Used by sorting methods and sorted collections like `TreeMap` and `TreeSet`
+
+#### SortedMap
+- Maintains keys in **sorted order**
+- Sorting based on **natural ordering** or a provided **Comparator**
+- Implemented by `TreeMap`
+- Provides range-view methods:
+  - `firstKey()`, `lastKey()`
+  - `headMap()`, `tailMap()`, `subMap()`
+
+#### NavigableMap
+- Extends `SortedMap`
+- Provides **navigation methods** for relative key lookup
+- Key methods:
+  - `lowerKey`, `floorKey`
+  - `higherKey`, `ceilingKey`
+- Supports **descending (reverse order) views**
+- Implemented by `TreeMap`
+
+#### IdentityHashMap (awareness)
+- Uses **reference equality (`==`)** instead of `equals()`
+- Treats two equal objects as different keys if references differ
+- Mainly used in framework-level or JVM-internal scenarios
+- Rarely used in application-level code
+
+
 
 
 ## Structure
