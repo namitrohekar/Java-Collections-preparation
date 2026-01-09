@@ -34,7 +34,7 @@ Each class demonstrates **how and when a specific collection is used**.
 
 
 ### Map Interface
-
+Note :- including Real world scenarios 
 #### HashMap
 - Key-value based data structure
 - Uses hashing to store and retrieve entries
