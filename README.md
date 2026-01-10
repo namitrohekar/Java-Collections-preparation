@@ -102,6 +102,51 @@ Note :- including Real world scenarios
 - Mainly used in framework-level or JVM-internal scenarios
 - Rarely used in application-level code
 
+#### Hashtable (awareness)
+- Legacy synchronized Map implementation
+- Thread-safe by synchronizing the **entire map**
+- Does **not allow null keys or null values**
+- Slower due to coarse-grained synchronization
+- Largely replaced by `ConcurrentHashMap` in modern Java
+
+#### ConcurrentHashMap (awareness)
+- Thread-safe Map designed for **high concurrency**
+- Allows concurrent read and write operations
+- Better performance than Hashtable
+- Does **not allow null keys or null values**
+- Commonly used in multi-threaded applications
+
+
+
+
+### Set Interface
+
+#### HashSet
+- Does not allow duplicate elements
+- No guarantee of insertion order
+- Allows **one null element**
+- Internally backed by a `HashMap`
+- Average time complexity for basic operations: **O(1)**
+- Used when uniqueness matters and order does not
+
+#### LinkedHashSet
+- Maintains **insertion order**
+- Does not allow duplicates
+- Slight overhead compared to HashSet
+- Useful when order of insertion must be preserved
+
+#### TreeSet
+- Stores elements in **sorted order**
+- Sorting based on **natural ordering** or a provided **Comparator**
+- Does **not allow null elements**
+- Time complexity for add/remove/search: **O(log n)**
+- Used when sorted data is required
+
+#### EnumSet (awareness)
+- Used exclusively with **enum types**
+- Extremely fast and memory efficient
+- Does not allow null elements
+- Preferred choice when working with enum constants
 
 
 
