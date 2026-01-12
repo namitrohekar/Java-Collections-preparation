@@ -148,6 +148,7 @@ Note :- including Real world scenarios
 - Does not allow null elements
 - Preferred choice when working with enum constants
 
+(Not deep dive as map theory applies to this as well)
 
 
 ## Structure
