@@ -150,6 +150,39 @@ Note :- including Real world scenarios
 
 (Not deep dive as map theory applies to this as well)
 
+### Queue 
+
+- Follows **FIFO (First-In-First-Out)** order
+- Elements are added at the tail and removed from the head
+- Common operations:
+  - `add / offer` → insert element
+  - `remove / poll` → remove element
+  - `element / peek` → view head element
+- Difference between methods:
+  - `add`, `remove`, `element` → throw exception on failure
+  - `offer`, `poll`, `peek` → return `false` or `null` on failure
+- Common implementations:
+  - `LinkedList`
+  - `ArrayDeque`
+- Used when order of processing matters
+
+---
+
+### PriorityQueue
+
+- Part of the Queue interface
+- **Does NOT follow FIFO**
+- Elements are ordered based on **priority**
+- Priority defined by:
+  - Natural ordering, or
+  - Custom `Comparator`
+- `peek()` always returns the **highest-priority element**
+- Does **not allow null elements**
+- Internally implemented using a **heap**
+- Commonly used in scheduling and priority-based processing
+
+
+
 
 ## Structure
 - One concept or problem per class
