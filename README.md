@@ -182,6 +182,93 @@ Note :- including Real world scenarios
 - Commonly used in scheduling and priority-based processing
 
 
+### Java 8 — Lambda Expressions & Functional Interfaces
+
+#### Lambda Expressions
+- Provide a **concise way to implement functional interfaces**
+- Reduce boilerplate code (no class, method name, or modifiers)
+- Syntax: `(parameters) -> expression / block`
+- Commonly used with:
+  - Threads
+  - Collections
+  - Streams
+
+---
+
+### Core Functional Interfaces (`java.util.function`)
+
+#### Predicate<T>
+- Represents a **boolean-valued condition**
+- Abstract method: `boolean test(T t)`
+- Common methods:
+  - `and()`
+  - `or()`
+  - `negate()`
+- Used for conditional checks and filtering
+
+---
+
+#### Function<T, R>
+- Represents a **transformation**
+- Abstract method: `R apply(T t)`
+- Supports composition:
+  - `andThen()`
+  - `compose()`
+
+##### Specializations
+- `UnaryOperator<T>` → input and output type same
+- `BinaryOperator<T>` → two inputs, same output type
+
+---
+
+#### Consumer<T>
+- Represents an **operation with side effects**
+- Abstract method: `void accept(T t)`
+- Does **not return a result**
+- Supports chaining using `andThen()`
+- Commonly used for printing, logging, modifying state
+
+---
+
+#### Supplier<T>
+- Supplies a value **without taking any input**
+- Abstract method: `T get()`
+- Used for lazy value generation or default values
+
+---
+
+### Bi-Functional Interfaces (awareness)
+- `BiPredicate<T, U>` → boolean condition on two inputs
+- `BiFunction<T, U, R>` → transformation with two inputs
+- `BiConsumer<T, U>` → consumes two inputs
+
+---
+
+### Method References
+- Shorthand for lambdas that call existing methods
+- Improve readability
+- Common forms:
+  - `ClassName::staticMethod`
+  - `object::instanceMethod`
+  - `ClassName::instanceMethod`
+
+---
+
+### Constructor References
+- Reference to a constructor instead of a lambda
+- Used when creating objects in a functional style
+- Example use case: mapping values to objects
+
+---
+
+### Mental Model 
+- **Predicate** → test condition  
+- **Function** → transform data  
+- **Consumer** → perform action  
+- **Supplier** → provide data  
+
+---
+
 
 
 ## Structure
