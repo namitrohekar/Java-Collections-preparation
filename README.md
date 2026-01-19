@@ -319,6 +319,15 @@ Covered through small, self-contained classes.
   - `findFirst`, `findAny`
 
 ---
+### Parallel Streams
+- Enable **concurrent processing** of stream elements using multiple threads
+- Created using `parallelStream()` or `stream.parallel()`
+- Best suited for **CPU-intensive**, **large**, and **independent** tasks
+- May perform worse for **small datasets** due to thread-management overhead
+- Require **stateless operations** and **no shared mutable state**
+- Order of execution is **not guaranteed**
+- Can produce incorrect results for **stateful or order-dependent logic**
+
 
 ### Additional Concepts
 - **Short-circuiting** improves performance by stopping early
