@@ -268,6 +268,64 @@ Note :- including Real world scenarios
 - **Supplier** → provide data  
 
 ---
+## Java 8 — Streams API (Practice)
+
+Hands-on practice of **Java Streams** focusing on
+**functional data processing, lazy evaluation, and interview-oriented usage**.
+
+Covered through small, self-contained classes.
+
+---
+
+### Stream Fundamentals
+- Streams process **data from a source** (collections, arrays, generators)
+- Do **not store data**
+- Are **lazy** and **single-use**
+- Execution happens only via **terminal operations**
+
+---
+
+### Stream Creation
+- From collections: `collection.stream()`
+- From arrays: `Arrays.stream(array)`
+- Using `Stream.of()`
+- Infinite streams:
+  - `Stream.generate()`
+  - `Stream.iterate()`
+
+---
+
+### Intermediate Operations (Lazy)
+- `filter()` → conditional selection  
+- `map()` → data transformation  
+- `sorted()` → ordering (natural / comparator)  
+- `distinct()` → remove duplicates  
+- `skip()` → skip first N elements  
+- `limit()` → restrict stream size  
+
+#### Stateless vs Stateful
+- **Stateless**: `filter`, `map`
+- **Stateful**: `sorted`, `distinct`, `limit`
+
+---
+
+### Terminal Operations (Eager)
+- `forEach()` → consume elements
+- `toList()` / `collect()` → materialize results
+- `reduce()` → combine elements into one result
+- `count()` → count elements
+- Short-circuiting operations:
+  - `anyMatch`, `allMatch`, `noneMatch`
+  - `findFirst`, `findAny`
+
+---
+
+### Additional Concepts
+- **Short-circuiting** improves performance by stopping early
+- **Primitive streams** (`IntStream`, etc.) avoid boxing
+- `reduce()` returns `Optional` when no identity is provided
+
+---
 
 
 

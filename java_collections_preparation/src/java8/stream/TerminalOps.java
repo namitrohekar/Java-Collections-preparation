@@ -2,8 +2,10 @@ package java8.stream;
 
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public class TerminalOps {
 	public static void main(String[] args) {
@@ -83,7 +85,15 @@ public class TerminalOps {
 		  */
 		 
 		 
-		 		 
+		 // Min and Max min ( min gets first element max gets last [order you can decide] )  
+		 
+		 System.out.println("Max" + Stream.of( 2 , 4 ,5).max( Comparator.naturalOrder()));
+		 System.out.println("Min" + Stream.of( 2 , 4 ,5).min( Comparator.naturalOrder()));
+		 
+		 
+		 
+		 
+		 
 		 
 	}
 
