@@ -1,5 +1,6 @@
 package java8.stream;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -37,6 +38,38 @@ public class IntermediateOps {
 		// 5. limit 
 		
 		System.out.println(Stream.iterate(1,  x -> x +1).skip(20).limit(100).toList());
+		
+		// peek -> ( Performs an action on each element as it is consumed)
+		
+		Stream.iterate(1 , x  -> x+ 1).skip(10).limit(10).peek(System.out::println).count();
+		
+		/* flatMap 
+		 * Handle streams of collections , lists or arrays where each element is itself a collection
+		 * Flatten nested structures ( e.g , lists within lists ) so that they can be processed as a single sequence of elements 
+		 * Transform and flatten at the same time 
+		 * 
+		*/
+		
+	List<List<String>> listOfLists = Arrays.asList(
+				Arrays.asList("Apple" , "Mango"),
+				Arrays.asList("Orange" , "Kiwi"),
+				Arrays.asList("Pear" , "Grape")
+				
+				);
+	
+	System.out.println(listOfLists.get(2).get(1));
+	
+	 List<String> flatList =listOfLists.stream().flatMap( x -> x.stream()).map(String::toUpperCase).toList();
+ 		System.out.println(flatList);
+		
+		List<String> sentences = Arrays.asList(
+				"Hello World",
+				"Java Streams are powerful",
+				"flatmap is useful"
+				);
+		
+		List<String> words = sentences.stream().flatMap( sen -> Arrays.stream(sen.split(" "))).map(String::toUpperCase).toList();
+		System.out.println(words);
 		
 	}
 }
