@@ -336,6 +336,32 @@ Covered through small, self-contained classes.
 
 ---
 
+### Collectors
+- Utility class providing **common reduction and aggregation strategies**
+- Used with `collect()` terminal operation
+- Common collectors:
+  - `toList()`, `toSet()`, `toCollection()` → materialize results
+  - `joining()` → concatenate stream elements
+  - `groupingBy()` → group elements by a classifier
+  - `partitioningBy()` → split elements into true/false groups
+  - `counting()`, `summingInt()`, `averagingDouble()` → numeric aggregation
+- Supports **downstream collectors** and **custom map implementations**
+- Commonly used for frequency maps, summaries, and transformations
+
+---
+
+### Primitive Streams
+- Specialized streams for primitives: `IntStream`, `LongStream`, `DoubleStream`
+- Avoid **boxing and unboxing overhead**
+- Provide numeric operations:
+  - `sum()`, `average()`, `min()`, `max()`
+  - `summaryStatistics()`
+- Range utilities:
+  - `range()` → exclusive end
+  - `rangeClosed()` → inclusive end
+- Can be boxed back to object streams when needed
+
+---
 
 
 ## Structure
